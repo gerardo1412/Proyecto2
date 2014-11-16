@@ -19,10 +19,21 @@
       <ul class="nav navbar-nav navbar-right">
         <li ng-class="{ active: isActive('/')}"><a href=<%=root_path%>><i class="icon-home icon-white"></i>Home</a></li>
         <% if usuario_signed_in? %>
-          
+          <li>
+           <%= link_to 'Log out', destroy_usuario_session_path,:class =>"btn btn-xs ",:method=>'delete'; %></li>
+
+           <li>
+            <a href=<%= usuario_path(current_usuario)%> >Tu cuenta</a>              
+           </li>
 
         <% else %>
+         
+    
+          <li >
+            <a href=<%= new_usuario_session_path%>>Log in </a>
+          </li>
           
+          <li><a href=<%=new_usuario_registration_path%>>Sign up</a></li>
 
         <% end %>
       </ul>
