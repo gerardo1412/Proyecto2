@@ -13,3 +13,35 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+
+  margin-left: 8% !important;
+  margin-right: 8% !important;
+  background-color: #ecf0f1 !important;
+}
+
+.container-sing-up {
+
+  float: left;
+  width :32%;
+  margin-left: 35%;
+  margin-top: 5%;
+}
+
+.container-sing-in {
+
+  float: left;
+  width :32%;
+  margin-left: 35%;
+  margin-top: 5%;
+}
+
+/*
+  css para algunos input
+*/
+.mytext {
+    width: 450px !important;
+    display: block;
+    padding: 6px 12px;
+}

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :usuarios
+
+  root 'home#index'
+  
   get 'post/index'
 
   get 'item/index'
