@@ -1,2 +1,11 @@
-<h1>Item#index</h1>
-<p>Find me in app/views/item/index.html.erb</p>
+<h1>Items</h1>
+<div class="container-graduate">
+<% @items.each do |item| %>
+	<div class="container-profile">	
+	  <ul>
+	  	<%= item.nombre %>
+		<a href=<%= edit_item_path(item)%> >Editar</a>
+	  </ul>
+	</div>
+<% end %>
+</div>
