@@ -41,3 +41,7 @@ gem 'spring',        group: :development
 gem 'devise'
 
 gem 'simple_form'
+
+gem "paperclip", "~> 4.2"
+
+gem 'activeadmin', github: 'gregbell/active_admin' 

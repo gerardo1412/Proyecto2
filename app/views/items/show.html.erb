@@ -1,0 +1,19 @@
+<div class="panel panel-danger">
+    <div class="panel-heading">Contact Information</div>
+      <div class="panel-body">
+        <h2>Nombre : </h2>
+		<%= @item.nombre %>
+		<p>
+		<h3>descripcion :</h3>
+		<%= @item.descripcion %>
+		<p>
+
+		<h3>foto</h3>
+		<%= image_tag @item.foto.url(:medium) %>
+
+		<p>
+		<a href=<%=items_path%> >Items</a>
+		 
+	</div>
+</div>
+

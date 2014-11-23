@@ -14,8 +14,12 @@
 ActiveRecord::Schema.define(version: 20141116031924) do
 
   create_table "items", force: true do |t|
-    t.string   "title"
-    t.text     "text"
+    t.string   "nombre"
+    t.text     "descripcion"
+    t.string   "foto_file_name"
+    t.string   "foto_content_type"
+    t.integer  "foto_file_size"
+    t.datetime "foto_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

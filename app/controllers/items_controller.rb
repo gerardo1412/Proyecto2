@@ -1,10 +1,33 @@
-class ItemController < ApplicationController
-  def create
-  	@item = items.create(item_params)
-  end
+class ItemsController < ApplicationController
+  	
 
-  private
-  	def item_params
-  		params.require(:item).permit(:nombreProducto, :cantidad)
+
+  	def new
+		 @item = Item.new
 	end
+
+	def index
+		@items = Item.all
+	end
+
+	def show
+		@item = Item.find(params[:id])
+	end
+
+	def create
+	
+
+		item = Item.new(item_params)
+		item.save
+
+	
+		redirect_to item
+
+	end
+
+	private
+	def item_params
+		params.require(:item).permit(:nombre,:descripcion,:foto)
+	end
+
 end

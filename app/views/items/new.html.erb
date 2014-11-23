@@ -1,0 +1,23 @@
+<div class="container-sing-up" >
+<h2>Sign up</h2>
+
+<%= simple_form_for(@item) do |f| %>
+  <%= f.error_notification %>
+
+
+  <!-- , hint: 'to make a comment in form' -->
+
+  <div class="form-inputs">
+    <%= f.input :nombre, required: true,:input_html => { :class => "mytext" }%>
+    <%= f.input :descripcion, required: true,:input_html => { :class => "mytext" }%>
+    <br>
+    <%= f.file_field :foto , required: true ,:html => { :multipart => true } %>
+    <br>
+   
+  </div>
+  <br>
+  <div class="form-actions">
+    <%= f.button :submit, "Crear" %>
+  </div>
+  <% end %>
+</div>
