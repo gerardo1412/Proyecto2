@@ -10,6 +10,8 @@
   <div class="form-inputs">
     <%= f.input :nombre, required: true,:input_html => { :class => "mytext" }%>
     <%= f.input :descripcion, required: true,:input_html => { :class => "mytext" }%>
+    <%= f.input :cantidad, required: true,:input_html => { :class => "mytext" }%>
+    <%= f.input :usados, :as => :hidden, required: true,:input_html => { :class => "mytext" , :value => 0}%>
     <br>
     <%= f.file_field :foto , required: true ,:html => { :multipart => true } %>
     <br>

@@ -49,6 +49,8 @@ ActiveRecord::Schema.define(version: 20141123045434) do
   create_table "items", force: true do |t|
     t.string   "nombre"
     t.text     "descripcion"
+    t.integer  "cantidad"
+    t.integer  "usados"
     t.string   "foto_file_name"
     t.string   "foto_content_type"
     t.integer  "foto_file_size"

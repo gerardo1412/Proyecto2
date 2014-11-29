@@ -31,6 +31,7 @@ class DeviseCreateUsuarios < ActiveRecord::Migration
       # t.datetime :locked_at
 
       t.string :nombre
+      t.integer :tipo
 
       t.timestamps
     end
