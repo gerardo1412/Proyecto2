@@ -2,8 +2,10 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :usuarios
-  resources :items
-  resources :posts
+  resources :items do
+    resources :posts
+  end
+
 
   root 'home#index'
   

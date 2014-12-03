@@ -60,11 +60,14 @@ ActiveRecord::Schema.define(version: 20141123045434) do
   end
 
   create_table "posts", force: true do |t|
-    t.string   "title"
+    t.string   "autor"
     t.text     "text"
+    t.integer  "item_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "posts", ["item_id"], name: "index_posts_on_item_id"
 
   create_table "usuarios", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -78,6 +81,7 @@ ActiveRecord::Schema.define(version: 20141123045434) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.string   "nombre"
+    t.integer  "tipo"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
