@@ -5,7 +5,7 @@ class PostsController < ApplicationController
     @item = Item.find(params[:item_id])
     @comment = @item.posts.create(post_params)
     redirect_to item_path(@item)
-  end
+   end
  
   private
     def post_params
