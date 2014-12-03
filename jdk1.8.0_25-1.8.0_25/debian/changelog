@@ -1,0 +1,6 @@
+jdk1.8.0-25 (1.8.025-1) experimental; urgency=low
+
+  * Converted from .rpm format to .deb by alien version 8.90
+  
+
+ -- g <g@kill>  Mon, 24 Nov 2014 12:08:59 -0300
