@@ -1,0 +1,2 @@
+class RecuentosController < ApplicationController
+end
