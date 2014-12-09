@@ -2,7 +2,7 @@
 <div class="container-item1">
 <% @items.each do |item| %>
 	<div class="container-item0">	
-	  <ul>
+	
 	  	<p>
 	  	<%= item.nombre %>
 	  	<p>
@@ -16,7 +16,7 @@
 		|
 		<% end %>
 		<%= link_to 'Destroy', item_path(item),method: :delete, data: { confirm: 'Are you sure?' } %>
-	  </ul>
+
 	</div>
 <% end %>
 </div>

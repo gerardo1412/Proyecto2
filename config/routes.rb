@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     resources :posts
   end
 
+  resources :recuentos
+
 
   root 'home#index'
   

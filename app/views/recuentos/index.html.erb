@@ -1,0 +1,14 @@
+<h1>Items</h1>
+<div class="container-item1">
+<% @items.each do |item| %>
+	<div class="container-item0">	
+	  	
+	  	<p>
+	  	<%= item.nombre %>
+	  	<p>
+	  	<%= image_tag item.foto.url(:medium) %>
+	  	<p>
+	  	<strong>Usados :</strong> <%= item.usados %>
+	</div>
+<% end %>
+</div>
