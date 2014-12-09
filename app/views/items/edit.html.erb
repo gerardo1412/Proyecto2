@@ -1,4 +1,4 @@
-<h1>Retirar un item</h1>
+<h1>Retirar item</h1>
  
 <%= form_for :item, url: item_path(@item), method: :patch do |f| %>
   <% if @item.errors.any? %>
@@ -12,9 +12,11 @@
     </ul>
   </div>
   <% end %>
+  <h3>Ahora hay : </h3>   <%= @item.cantidad %>
+
   <p>
-    <%= f.label :nombre %><br>
-    <%= f.text_field :nombre %>
+    <%= f.label :Modificar_Cantidad %><br>
+    <%= f.text_field :cantidad %>
 
 
   

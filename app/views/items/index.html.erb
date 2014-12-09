@@ -10,8 +10,12 @@
 	  	<p>
 		<a href=<%= item_path(item)%> >Mostrar</a>
 		|
-		<a href=<%= edit_item_path(item)%> >Editar</a>
-		| <%= link_to 'Destroy', item_path(item),method: :delete, data: { confirm: 'Are you sure?' } %>
+		<% user = current_usuario %>
+		<% if user.tipo == 2 %>
+			<a href=<%= edit_item_path(item)%> >Retirar Item</a>
+		|
+		<% end %>
+		<%= link_to 'Destroy', item_path(item),method: :delete, data: { confirm: 'Are you sure?' } %>
 	  </ul>
 	</div>
 <% end %>
