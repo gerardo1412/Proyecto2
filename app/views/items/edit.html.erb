@@ -17,6 +17,9 @@
   <p>
     <%= f.label :Modificar_Cantidad %><br>
     <%= f.text_field :cantidad %>
+  <p>
+  
+    <%= f.hidden_field :usados , value: @item.cantidad  %>
 
 
   

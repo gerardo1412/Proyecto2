@@ -27,8 +27,9 @@ class ItemsController < ApplicationController
 
 	def update
 	  @item = Item.find(params[:id])
-	 
+	  usados = item_params[:usados].to_i - item_params[:cantidad].to_i  + @item.usados.to_i
 	  if @item.update(item_params)
+	  	@item.update(usados: usados)
 	    redirect_to @item
 	  else
 	    render 'edit'
