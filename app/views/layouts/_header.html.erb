@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h1>Inventario <small> productoss</small></h1>
+  <h1>Inventario <small> productos</small></h1>
   
 </div>
 
@@ -20,7 +20,7 @@
         <li ng-class="{ active: isActive('/')}"><a href=<%=root_path%>><i class="icon-home icon-white"></i>Home</a></li>
         <% if usuario_signed_in? %>
           <li>
-           <%= link_to 'Log out', destroy_usuario_session_path,:class =>"btn btn-xs ",:method=>'delete'; %></li>
+           <%= link_to 'Cerrar sesion', destroy_usuario_session_path,:class =>"btn btn-xs ",:method=>'delete'; %></li>
 
             <li >
             <a href=<%= new_item_path%>>Crear item </a>
@@ -41,10 +41,10 @@
             </li>
     
           <li >
-            <a href=<%= new_usuario_session_path%>>Log in </a>
+            <a href=<%= new_usuario_session_path%>>Iniciar sesion </a>
           </li>
           
-          <li><a href=<%=new_usuario_registration_path%>>Sign up</a></li>
+          <li><a href=<%=new_usuario_registration_path%>>Registrarse </a></li>
 
         <% end %>
       </ul>

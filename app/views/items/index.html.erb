@@ -11,11 +11,11 @@
 		<a href=<%= item_path(item)%> >Mostrar</a>
 		|
 		<% user = current_usuario %>
-		<% if user.tipo == 2 %>
+		<% if user.nil? == false && user.tipo == 2 %>
 			<a href=<%= edit_item_path(item)%> >Retirar Item</a>
 		|
 		<% end %>
-		<%= link_to 'Destroy', item_path(item),method: :delete, data: { confirm: 'Are you sure?' } %>
+		<%= link_to 'Eliminar', item_path(item),method: :delete, data: { confirm: 'Estas seguro?' } %>
 
 	</div>
 <% end %>
