@@ -28,13 +28,13 @@
 
 <% @item.posts.each do |post| %>
 
-	Autor : <%= post.autor %>
+	<strong> Autor : </strong><%= post.autor %>
 	<p>
-	Text : <%= post.text %>
+	<strong>  Comentario : </strong><%= post.text %>
 	<p>
 <% end %>
 
-<h2>Add a comment:</h2>
+<h2>Agregar comentario:</h2>
 <%= form_for([@item, @item.posts.build]) do |f| %>
   <p>
     <%= f.label :autor %><br>

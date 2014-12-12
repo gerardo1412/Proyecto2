@@ -7,4 +7,4 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
   ##tipo de usuario 2 to change existencias
-  Usuario.create([{ nombre: 'Gustavo', email: 'email1@email.com' , password: 'password' , tipo: 2 }])
+  Usuario.create([{ nombre: 'Gustavo', email: 'gustavo@gmail.com' , password: 'password' , tipo: 2 }])

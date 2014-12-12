@@ -9,13 +9,15 @@
 	  	<%= image_tag item.foto.url(:medium) %>
 	  	<p>
 		<a href=<%= item_path(item)%> >Mostrar</a>
-		|
+		
 		<% user = current_usuario %>
 		<% if user.nil? == false && user.tipo == 2 %>
-			<a href=<%= edit_item_path(item)%> >Retirar Item</a>
+			|<a href=<%= edit_item_path(item)%> >Retirar Item</a>
 		|
 		<% end %>
-		<%= link_to 'Eliminar', item_path(item),method: :delete, data: { confirm: 'Estas seguro?' } %>
+		<% if user.nil? == false && user.tipo == 2 %>
+			<%= link_to 'Eliminar', item_path(item),method: :delete, data: { confirm: 'Estas seguro?' } %>
+		<% end %>
 
 	</div>
 <% end %>
